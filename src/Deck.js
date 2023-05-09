@@ -14,8 +14,7 @@ function Deck() {
   const [remainingAuto, setRemainingAuto] = useState(null);
   const [lastCard, setLastCard] = useState(0);
   const timerId = useRef();
-  //const remainingAutoRef = useRef(null);//
-  //let [count, setCount] = useState(0);
+
 
   
   // this is called *after* component first added to DOM
@@ -112,10 +111,10 @@ const getDeck2 = async () =>{
   
   
             }else if (deckAuto) {
-              //  fetchData().then(res =>{
-              //   setRemainingAuto(res.data.remaining);
-              //   setCardAuto(res.data.cards[0].image);
-              //  }); 
+               fetchData().then(res =>{
+                setRemainingAuto(res.data.remaining);
+                setCardAuto(res.data.cards[0].image);
+               }); 
 
             } 
             
